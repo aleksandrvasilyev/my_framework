@@ -8,7 +8,7 @@ class BasePage:
         self._driver = driver
         self.__wait = WebDriverWait(self._driver, 5)
 
-    def __wait_until_element_located(self, locator):
+    def wait_until_element_located(self, locator):
         return self.__wait.until(EC.presence_of_element_located(locator))
 
     def __wait_until_element_clickable(self, locator):
